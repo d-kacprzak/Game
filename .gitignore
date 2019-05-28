@@ -1,2 +1,8 @@
 .idea/workspace.xml
 .idea/
+config
+description
+HEAD
+hooks/
+info/
+.gitignore
