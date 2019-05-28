@@ -24,22 +24,25 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     console.log("win");
-    const smallUserWorld = "user".fontsize(4).sup()
-    const smallCompWorld = "comp".fontsize(4).sup()
+    const smallUserWorld = "user".fontsize(2).sup();
+    const smallCompWorld = "comp".fontsize(2).sup();
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWorld} beats ${convertToWord(computerChoice)}${smallCompWorld}. You win!`;
 }
 
 function lose(userChoice, computerChoice) {
     console.log("lose");
     computerScore++;
+    const smallUserWorld = "user".fontsize(2).sup();
+    const smallCompWorld = "comp".fontsize(2).sup();
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(computerChoice)} loses to ${convertToWord(userChoice)}. You lost...`;
+    result_p.innerHTML = `${convertToWord(computerChoice)}${smallUserWorld} loses to ${convertToWord(userChoice)}${smallCompWorld}. You lost...`;
 }
 
 function draw(userChoice, computerChoice) {
     console.log("Draw");
-    result_p.innerHTML = `${convertToWord(userChoice)} and  ${convertToWord(computerChoice)}. Draw, nobody win!`;
-
+    const smallUserWorld = "user".fontsize(2).sup();
+    const smallCompWorld = "comp".fontsize(2).sup();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWorld} and  ${convertToWord(computerChoice)}${smallCompWorld}. Draw, nobody win!`;
 }
 
 function game(userChoice) {
